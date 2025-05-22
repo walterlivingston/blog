@@ -1,0 +1,5 @@
+- [ ] bounding boxes and ellipses
+- [ ] home server on pi 4
+- [ ] MEKF
+- [ ] proper monte-carlo setup
+- [ ] book-reviews?

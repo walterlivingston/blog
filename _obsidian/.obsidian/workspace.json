@@ -11,10 +11,14 @@
             "id": "0ff85bc721a1cb9c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "post ideas.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "post ideas"
             }
           }
         ]
@@ -164,9 +168,9 @@
   },
   "active": "0ff85bc721a1cb9c",
   "lastOpenFiles": [
+    "post ideas.md",
     "_posts/2025-05-12-test.md",
     "templates/jekyll-post.md",
-    "Untitled.md",
     "templates",
     "_posts"
   ]
