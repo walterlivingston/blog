@@ -12,6 +12,8 @@ lang: en
 timezone: America/Chicago
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+plugins:
+  - jekyll-seo-tag
 # ↓ --------------------------
 
 title: Walter Livingston # the main title

@@ -1,0 +1,19 @@
+[project]
+name = "bounding-boxes-ellipsoids"
+version = "0.1.0"
+description = "scripts for my posts on bounding boxes & ellipsoids"
+authors = [
+    {name = "Walter Livingston",email = "wblivingston18@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy (>=2.2.6,<3.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
