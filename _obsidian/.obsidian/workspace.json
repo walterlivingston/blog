@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f7cdb92b3634b344",
+        "id": "4b60de63d9374fa6",
         "type": "tabs",
         "children": [
           {
-            "id": "0ff85bc721a1cb9c",
+            "id": "8549d17a110f62f7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -162,11 +162,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0ff85bc721a1cb9c",
+  "active": "8549d17a110f62f7",
   "lastOpenFiles": [
+    "_posts/2025-05-14-bounding-boxes-bounding-ellipsoids.md",
+    "Untitled.md",
     "_posts/2025-05-12-test.md",
     "templates/jekyll-post.md",
-    "Untitled.md",
     "templates",
     "_posts"
   ]
