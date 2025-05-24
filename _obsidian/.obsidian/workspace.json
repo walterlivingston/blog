@@ -11,10 +11,14 @@
             "id": "8549d17a110f62f7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "post ideas.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "post ideas"
             }
           }
         ]
@@ -165,8 +169,7 @@
   "active": "8549d17a110f62f7",
   "lastOpenFiles": [
     "_posts/2025-05-14-bounding-boxes-bounding-ellipsoids.md",
-    "Untitled.md",
-    "_posts/2025-05-12-test.md",
+    "post ideas.md",
     "templates/jekyll-post.md",
     "templates",
     "_posts"
