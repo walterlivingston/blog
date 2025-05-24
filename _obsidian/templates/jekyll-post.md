@@ -15,10 +15,8 @@ tR = `---
 layout: post
 title: "${title}"
 date: ${datetime}
-categories: [blog]
+categories: [personal]
 tags: []
 ---
-
-# ${title}
 `
 %>
