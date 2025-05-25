@@ -15,7 +15,7 @@ tR = `---
 layout: post
 title: "${title}"
 date: ${datetime}
-categories: [personal]
+categories: []
 tags: []
 comments: true
 ---

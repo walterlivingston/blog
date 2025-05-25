@@ -15,7 +15,7 @@
               "state": {
                 "file": "_unfinished_posts/2025-05-14-bounding-boxes-bounding-ellipsoids.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "2025-05-14-bounding-boxes-bounding-ellipsoids"
@@ -166,11 +166,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8549d17a110f62f7",
+  "active": "8ea12beb03f91392",
   "lastOpenFiles": [
-    "templates/jekyll-post.md",
     "_posts/2025-05-24-my-blog.md",
     "_unfinished_posts/2025-05-14-bounding-boxes-bounding-ellipsoids.md",
+    "templates/jekyll-post.md",
     "post ideas.md",
     "_unfinished_posts/2025-05-24-2025-05-24-new-blog.md",
     "_unfinished_posts",

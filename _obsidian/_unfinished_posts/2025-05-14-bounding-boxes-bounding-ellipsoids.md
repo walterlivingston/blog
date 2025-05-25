@@ -3,7 +3,7 @@ layout: post
 title: Bounding Boxes & Bounding Ellipsoids
 date: 2025-05-14 14:52:59
 categories:
-  - blog
+  - programming
 tags:
   - sensor-fusion
   - kalman-filter
@@ -12,18 +12,21 @@ tags:
   - obb
   - obe
 comments: true
+math: true
 ---
-## Introduction
+# Introduction
 Bounding geometries for a set of points can be very useful in fields such as robotics and autonomous vehicles. They can also be applied to some niche fields such as geometrically bounding covariance matrices.[^1] They can be difficult to create, that is, unless you know a few tricks.
-## Overview
-The majority of the bounding box creation was originally defined by Sai Sharath Kakubal in his article "2D Oriented bounding boxes made simple".[^2] For consistencies sake, a lot of this will be redefined in this article, with the addition of bounding ellipsoids. The steps of this process are as follows:
+# Overview
+The majority of the bounding box creation methodology presented here was originally defined by Sai Sharath Kakubal in his article "2D Oriented bounding boxes made simple".[^2] For consistencies sake, a full walkthrough of this process will be shown in this article as well. The steps of this process are as follows:
+
 1. Obtain Sample Data
 2. Principal Component Analysis
 3. Rotate the Data to be Axis-Aligned
 4. Form Axis-Aligned Bounding Box (AABB) & Axis-Aligned Bounding Ellipse
 5. Form Oriented Bounding Box (OBB) & Oriented Bounding Ellipse (OBE)
-### Step 1: Obtain Sample Data
-The first step to this process is obtaining sample data. In application, this may be obtained in various ways. The data may be point clouds or sampled ellipses, but for our example here we will generate random points to act as our sampled data. Arbitrary biases and standard deviations were added to the data to make it realistic to actual applications. A rotation to the data was also added.
+
+## Step 1: Obtain Sample Data
+The first step to this process is obtaining sample data. In application, this may be obtained in various ways. The data may be point clouds or sampled ellipses, but for our example here we will generate random points to act as our sampled data. Arbitrary biases and standard deviations were added to the data to make it more realistic to actual applications. The data was also rotated to ensure the data was not naturally axis-aligned.
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -41,23 +44,33 @@ R = np.array([[np.cos(theta), -np.sin(theta)],
 [np.sin(theta), np.cos(theta)]])
 rot_data = R @ data
 ```
-### Step 2: Principal Component Analysis
-COME BACK AND ADD IN DEPTH PCA DEFINITION
+## Step 2: Principal Component Analysis
+"Principal component analysis, or PCA, reduces the number of dimensions in large datasets to principal components that retain most of the original information."[^3] Essentially, it is a statistical process that stores the information about the dataset in it's principal components. For our purposes, this will be done through calculating the covariance of the sample data and decomposing it into eigenvalues and eigenvectors. The eigenvalues tell you about the spread of the data, while the eigenvectors provide the rotation of the data.
 ```python
 # principal component analysis
 P = np.cov(rot_data)
-mu = np.mean(rot_data, axis=1)
-centered_data = np.transpose(rot_data.T - mu)
-D, V = np.linalg.eig(P.T)
+D, V = np.linalg.eig(P) # D is the eigenvalues, V is the eigenvectors
 ```
-### Step 3: Rotate the Data to be Axis-Aligned
-Utilizing the eigenvector matrix obtained through PCA, the centered data can be rotated to be axis-aligned.
+## Step 3: Rotate the Data to be Axis-Aligned
+To axis-align the data, we first need to center it about the origin. This is accomplished by taking the mean of the data and subtracting it out. Now, utilizing the eigenvector matrix obtained through PCA, the centered data can be rotated to be axis-aligned.
 ```python
 # axis-align data
+mu = np.mean(rot_data, axis=1)
+centered_data = np.transpose(rot_data.T - mu)
 aa_points = V.T @ centered_data
 ```
-### Step 4: Form Axis-Aligned Bounding Box (AABB) & Axis-Aligned Bounding Ellipse (AABE)
+## Step 4: Form Axis-Aligned Bounding Box (AABB) & Axis-Aligned Bounding Ellipse (AABE)
 With the data axis-aligned, it is trivial to form a bounding box around it. This is done by finding the maximum and minimum x and y values of the data. These are then subtracted to get the size of the box; i.e. width and height. Using these values, the corner points of the bounding box can be formed.
+Forming the axis-aligned bounding ellipse (AABE) is a little more tricky. To do this, we have to understand the relationship between the dimensions of the ellipse and the eigenvalues of it's matrix representation. The matrix form of an ellipse is shown below:
+
+$$ xPx^T = c $$
+
+Here, $$P$$ is the matrix representation of an ellipse. The dimensions of this ellipse are determined by the eigenvalues of the matrix $$P$$. This relationship is shown below:
+
+$$ d_i = \frac{1}{\sqrt{\lambda_i}} $$
+
+where $$d_i$$ is the $$i^{th}$$ dimension and $$\lambda_i$$ is the $$i^{th}$$ eigenvalue of $$P$$. Given these two relationships, we can calculate the eigenvalues of the bounding ellipse from the 
+
 ```python
 # axis-aligned bounding box
 mx = np.max(aa_points, axis=1)
@@ -73,7 +86,7 @@ tolerance = 1
 eigenvalues = ((np.sqrt(2 + (tolerance*2))/(sz))**2)
 S_aabe = np.diag(eigenvalues)
 ```
-### Step 5: Form Oriented Bounding Box (OBB) & Oriented Bounding Ellipse (OBE)
+## Step 5: Form Oriented Bounding Box (OBB) & Oriented Bounding Ellipse (OBE)
 Converting the axis-aligned bounding box (AABB) to an oriented bounding box is very simple. The corner points calculated in Step 3 need to be rotated back to the original frame using the eigenvectors obtained through PCA in Step 1.
 Converting this oriented bounding box in
 ```python
@@ -93,5 +106,6 @@ For my personal research, these bounding geometries were used to geometrically d
 ## Future Work
 
 ## References
-[^1]: My paper 
-[^2]: https://logicatcore.github.io/scratchpad/lidar/sensor-fusion/jupyter/2021/04/20/2D-Oriented-Bounding-Box.html
+[^1]: [Livingston, W. B., & Bevly, D. M. (2025). Pedestrian Attitude Estimation using a Multiplicative Extended Kalman Filter with Geometrically-Defined Innovation Covariance. In _2025 IEEE/ION Position, Location and Navigation Symposium (PLANS)_ (pp. 1-8).](https://www.ion.org/publications/abstract.cfm?articleID=20197)
+[^2]: [_2D oriented bounding boxes made simple_. Scratchpad. (2021, April 20).](https://logicatcore.github.io/scratchpad/lidar/sensor-fusion/jupyter/2021/04/20/2D-Oriented-Bounding-Box.html)
+[^3]: [Ibm. (2025, April 16). _What is Principal Component Analysis (PCA)?_. IBM.](https://www.ibm.com/think/topics/principal-component-analysis)

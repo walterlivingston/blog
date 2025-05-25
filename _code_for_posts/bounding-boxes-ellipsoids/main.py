@@ -16,11 +16,11 @@ rot_data = R @ data
 
 # principal component analysis
 P = np.cov(rot_data)
-mu = np.mean(rot_data, axis=1)
-centered_data = np.transpose(rot_data.T - mu)
-D, V = np.linalg.eig(P.T)
+D, V = np.linalg.eig(P) # D is the eigenvalues, V is the eigenvectors
 
 # axis-align data
+mu = np.mean(rot_data, axis=1)
+centered_data = np.transpose(rot_data.T - mu)
 aa_points = V.T @ centered_data
 
 # axis-aligned bounding box
@@ -40,7 +40,7 @@ obb_pts = np.transpose(obb_pts.T + mu)
 tolerance = 1
 eigenvalues = ((np.sqrt(2 + (tolerance*2))/(sz))**2)
 S_aabe = np.diag(eigenvalues)
-S_obe = np.diag(eigenvalues)
+S_obe = V @ np.diag(eigenvalues) @ V.T
 
 # plot ellipse
 eigVals, eigVecs = np.linalg.eig(S_obe)
