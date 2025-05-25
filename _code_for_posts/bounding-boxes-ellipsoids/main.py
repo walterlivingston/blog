@@ -36,13 +36,14 @@ pts = np.array([[x[0], x[1], x[1], x[0], x[0]],
 obb_pts = V @ pts
 obb_pts = np.transpose(obb_pts.T + mu)
 
-# oriented ellipse matrix
+# oriented bounding ellipse
 tolerance = 1
 eigenvalues = ((np.sqrt(2 + (tolerance*2))/(sz))**2)
-S = V @ np.diag(eigenvalues) @ V.T
+S_aabe = np.diag(eigenvalues)
+S_obe = np.diag(eigenvalues)
 
 # plot ellipse
-eigVals, eigVecs = np.linalg.eig(S)
+eigVals, eigVecs = np.linalg.eig(S_obe)
 t = np.linspace(0, 2 * np.pi, 1000)
 circle = np.array([np.cos(t), np.sin(t)])
 aa_ellipse = np.diag(1/np.sqrt(eigVals)) @ circle
