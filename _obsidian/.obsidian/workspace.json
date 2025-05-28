@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1304df130976f361",
+        "id": "953f57a081c67313",
         "type": "tabs",
         "children": [
           {
-            "id": "683c2831680a6a76",
+            "id": "a31404bf62131c83",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-05-27-bounding-boxes-bounding-ellipsoids.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-05-27-bounding-boxes-bounding-ellipsoids"
             }
           }
         ]
@@ -162,10 +166,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "683c2831680a6a76",
+  "active": "8ea12beb03f91392",
   "lastOpenFiles": [
-    "_unfinished_posts/2025-05-14-bounding-boxes-bounding-ellipsoids.md",
     "_posts/2025-05-24-my-blog.md",
+    "_posts/2025-05-27-bounding-boxes-bounding-ellipsoids.md",
     "templates/jekyll-post.md",
     "post ideas.md",
     "_unfinished_posts/2025-05-24-2025-05-24-new-blog.md",

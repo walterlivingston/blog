@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bounding Boxes & Bounding Ellipsoids
-date: 2025-05-14 14:52:59
+date: 2025-05-27 20:38:00
 categories:
   - programming
 tags:
@@ -27,7 +27,7 @@ The majority of the bounding box creation methodology presented here was origina
 
 ## Step 1: Obtain Sample Data
 The first step to this process is obtaining sample data. In application, this may be obtained in various ways. The data may be point clouds or sampled ellipses, but for our example here we will generate random points to act as our sampled data. Arbitrary biases and standard deviations were added to the data to make it more realistic to actual applications. The data was also rotated to ensure the data was not naturally axis-aligned.
-![sampled data](/assets/img/bounding-boxes-bounding-ellipsoids/step-1-sample.png)
+![sampled data](/assets/img/bounding-boxes-bounding-ellipsoids/step-1-samples.png)
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
