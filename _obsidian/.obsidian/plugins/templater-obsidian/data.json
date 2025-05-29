@@ -17,6 +17,10 @@
     {
       "folder": "_posts",
       "template": "templates/jekyll-post.md"
+    },
+    {
+      "folder": "_unfinished_posts",
+      "template": "templates/jekyll-post.md"
     }
   ],
   "enable_file_templates": false,
