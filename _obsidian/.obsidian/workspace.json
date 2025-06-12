@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-05-27-bounding-boxes-bounding-ellipsoids.md",
+                "file": "_unfinished_posts/2025-06-12-multiplicative-extended-kalman-filter-mekf.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-27-bounding-boxes-bounding-ellipsoids"
+              "title": "2025-06-12-multiplicative-extended-kalman-filter-mekf"
             }
           }
         ]
@@ -166,12 +166,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8ea12beb03f91392",
+  "active": "a31404bf62131c83",
   "lastOpenFiles": [
-    "_posts/2025-05-24-my-blog.md",
     "_posts/2025-05-27-bounding-boxes-bounding-ellipsoids.md",
-    "templates/jekyll-post.md",
+    "_unfinished_posts/2025-06-12-multiplicative-extended-kalman-filter-mekf.md",
+    "_posts/2025-05-24-my-blog.md",
+    "Untitled.md",
+    "_unfinished_posts",
     "post ideas.md",
+    "templates/jekyll-post.md",
     "_unfinished_posts/2025-05-24-2025-05-24-new-blog.md",
     "_unfinished_posts",
     "templates",

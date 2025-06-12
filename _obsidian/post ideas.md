@@ -1,5 +1,6 @@
-- [ ] bounding boxes and ellipses
-- [ ] home server on pi 4
+- [x] bounding boxes and ellipses
 - [ ] MEKF
+- [ ] non-coop iridium velocity
+- [ ] home server on pi 4
 - [ ] proper monte-carlo setup
 - [ ] book-reviews?
