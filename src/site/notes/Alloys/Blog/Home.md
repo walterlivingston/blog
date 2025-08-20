@@ -7,7 +7,7 @@
 
 ---
 ## Recent Posts
-- [[Alloys/Blog/Bounding Boxes & Bounding Ellipsoids\|Bounding Boxes & Bounding Ellipsoids]]
+- [[Alloys/Blog/Posts/Bounding Boxes & Bounding Ellipsoids\|Bounding Boxes & Bounding Ellipsoids]]
 
 { .block-language-dataview}
 ---
