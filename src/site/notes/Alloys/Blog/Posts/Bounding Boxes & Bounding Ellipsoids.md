@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Posts/Bounding Boxes & Bounding Ellipsoids.md","permalink":"/posts/bounding-boxes-and-bounding-ellipsoids/","title":"Bounding Boxes & Bounding Ellipsoids","tags":["alloy","blog"],"created":"2025-08-20T10:37:48.855-05:00","updated":"2025-08-20T11:02:42.525-05:00"}
+{"dg-publish":true,"dg-path":"Posts/Bounding Boxes & Bounding Ellipsoids.md","permalink":"/posts/bounding-boxes-and-bounding-ellipsoids/","title":"Bounding Boxes & Bounding Ellipsoids","tags":["alloy","blog"],"created":"2025-08-20T10:37:48.000-05:00","updated":"2025-08-20T11:02:42.000-05:00"}
 ---
 
 # Introduction
