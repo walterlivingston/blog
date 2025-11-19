@@ -12,8 +12,8 @@ I am a follower of Christ, father and husband, as well as a Mechanical Engineer.
 ---
 ## Recent Posts
 
-- [[03 Alloys/Blog/Posts/Bounding Boxes & Bounding Ellipsoids\|Bounding Boxes & Bounding Ellipsoids]]
 - [[03 Alloys/Blog/Posts/My Blog\|My Blog]]
+- [[03 Alloys/Blog/Posts/Bounding Boxes & Bounding Ellipsoids\|Bounding Boxes & Bounding Ellipsoids]]
 
 { .block-language-dataview}
 
