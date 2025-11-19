@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/03-alloys/blog/home/","title":"Home","tags":["blog","alloy","gardenEntry"]}
+{"dg-publish":true,"dg-path":"Home.md","permalink":"/home/","title":"Home","tags":["blog","alloy","gardenEntry"]}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/03-alloys/blog/my-blog/","title":"My Blog","tags":["theology","programming","personal","optimal-estimation","literature","inertial-navigation","home-project","dungeons-and-dragons","dnd","blog","bible-study","alloy"]}
+{"dg-publish":true,"dg-path":"My Blog.md","permalink":"/my-blog/","title":"My Blog","tags":["theology","programming","personal","optimal-estimation","literature","inertial-navigation","home-project","dungeons-and-dragons","dnd","blog","bible-study","alloy"]}
 ---
 
 
