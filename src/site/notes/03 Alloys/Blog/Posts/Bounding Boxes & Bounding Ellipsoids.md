@@ -104,10 +104,10 @@ tolerance = 1
 S_obe = V @ np.diag(eigenvalues) @ V.T
 ```
 
-### Applications
+## Applications
 For my personal research, these bounding geometries were used to geometrically define the innovation covariance of a Kalman filter. This was done by sampling the points for the state and measurement error ellipses, and performing the above calculations to create a bounding ellipse(or in my case ellipsoid) around these error ellipses in order to form a better innovation covariance than the typical Kalman filtering equations. My paper on the topic is "Pedestrian Attitude Estimation using a Multiplicative Extended Kalman Filter with Geometrically-Defined Innovation Covariance".[^1]
 
-### References
+## References
 
 [^1]: [Livingston, W. B., & Bevly, D. M. (2025). Pedestrian Attitude Estimation using a Multiplicative Extended Kalman Filter with Geometrically-Defined Innovation Covariance. In _2025 IEEE/ION Position, Location and Navigation Symposium (PLANS)_ (pp. 1-8).](https://www.ion.org/publications/abstract.cfm?articleID=20197)
 [^2]: [_2D oriented bounding boxes made simple_. Scratchpad. (2021, April 20).](https://logicatcore.github.io/scratchpad/lidar/sensor-fusion/jupyter/2021/04/20/2D-Oriented-Bounding-Box.html)
