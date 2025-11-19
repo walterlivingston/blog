@@ -9,6 +9,8 @@
 ---
 ## Recent Posts
 
+- [[03 Alloys/Blog/Posts/Bounding Boxes & Bounding Ellipsoids\|Bounding Boxes & Bounding Ellipsoids]]
+- [[03 Alloys/Blog/Posts/My Blog\|My Blog]]
 
 { .block-language-dataview}
 
