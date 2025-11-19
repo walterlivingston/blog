@@ -5,7 +5,8 @@
 
 ## Home
 *A blog I would've found useful*
-This blog is meant to be a collection of solutions to problems I have encountered over the years, as well as my other ideas and thoughts. Hopefully saving someone else the time of solving these issues.
+
+This blog is meant to be a collection of solutions to problems I have encountered over the years, as well as my other ideas and thoughts. Hopefully saving someone else the time of solving these issues.  
 I am a follower of Christ, father and husband, as well as a Mechanical Engineer. Find below some of the content I have made relating to these areas of life.
 
 ---
